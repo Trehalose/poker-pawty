@@ -4,6 +4,10 @@ const askPlayerCount = (error = '') => {
 	const playerCountStr = prompt(`${errorMsg}How many additional players would you like to join you?\n- 1 is the minimum. (default)\n- ${MAX_COUNT} is the maximum.`);
 	const playerCountNum = Number(playerCountStr || 1);
 
+	/*
+		Checks if out of allowed opponent range or if other invalid inputs
+		Returns a number
+	*/
 	if (
 		typeof playerCountNum === 'number' &&
 		playerCountNum >= 1 &&
