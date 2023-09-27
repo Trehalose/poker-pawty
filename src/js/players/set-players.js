@@ -1,4 +1,5 @@
 import { DEFAULT_PLAYER_PROPERTIES } from './constants.js';
+import getRandomDoggoName from './get-a-name.js';
 
 /* Player format will look like so:
 	{
@@ -7,16 +8,22 @@ import { DEFAULT_PLAYER_PROPERTIES } from './constants.js';
 		handType: undefined
 	}
 */
-const setPlayers = (opponentCount = 1) => {
+const setPlayers = (opponentCount = 1, preferredName = 'You') => {
 	// The user for this application
 	const players = [];
-	// TODO: PASS IN A USER REQUESTED NAME
-	players.push({ id: 0, ...DEFAULT_PLAYER_PROPERTIES() });
+	players.push({
+		id: 0,
+		name: preferredName,
+		...DEFAULT_PLAYER_PROPERTIES()
+	});
 
 	// The opponent player bots
 	for(let i = 0; i < opponentCount; i++) {
-		// TODO: GENERATE FUN RANDOM NAMES
-		players.push({ id: i + 1, ...DEFAULT_PLAYER_PROPERTIES() });
+		players.push({
+			id: i + 1,
+			name: getRandomDoggoName(),
+			...DEFAULT_PLAYER_PROPERTIES()
+		});
 	}
 
 	return players;

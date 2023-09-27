@@ -10,7 +10,7 @@ const renderWinnerAnnouncement = (player = {}) => {
 		const isUnnamedHandType = player.handType === HAND_TYPES.UNNAMED().index;
 		const winReason = isUnnamedHandType ? 'a higher card' : Object.values(HAND_TYPES).find(val => val().index === player.handType)().prettyName;
 		uiEl.innerHTML = `<p id="winner-announcement">
-			Player #${player.id}<br />
+			${player.name}<br />
 			<small>won the game with a</small><br />
 			<strong>${winReason}</strong>!
 		</p>`

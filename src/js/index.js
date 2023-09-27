@@ -14,10 +14,12 @@ const announceWinner = () => {
 	renderWinnerAnnouncement(players[0]);
 };
 
-// Ladies && gentlemen, let's start the game~
+// Get details from player to slightly personalize things
+const usersPreferredName = prompt(`What name would you like to go by?\n\nDefault is "You".`) || 'You';
 const playerCount = askPlayerCount();
-// TODO: ASK PLAYER THEIR NAME. BE A FANCY-PANTS~
-const players = setPlayers(playerCount);
+
+// Ladies && gentlemen, let's start the game~
+const players = setPlayers(playerCount, usersPreferredName);
 players.forEach((player) => {
 	player.hand = dealHand();
 	player.handType = determineHandType(player.hand);
