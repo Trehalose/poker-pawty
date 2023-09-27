@@ -41,11 +41,3 @@ body {
 	background-position: center;
 	overflow: hidden;
 }
-
-.player {
-	position: absolute;
-	width: min(45vw, 45vh);
-	height: min(45vw, 45vh);
-	transform-origin: center top;
-	border: transparent solid 0;
-}

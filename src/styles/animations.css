@@ -1,0 +1,19 @@
+/* Player animations */
+@keyframes playerAppears {
+	from { bottom: 100%; }
+	to { bottom: 0; }
+}
+@keyframes playerRevealsHand {
+	0% { bottom: 0; }
+	5% { bottom: -1%; }
+	30% { bottom: 200%; }
+	60% { bottom: 200%; }
+	95% { bottom: -1%; }
+	100% { bottom: 0; }
+}
+
+/* UI animations */
+@keyframes displayWinnerAnnouncement {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
