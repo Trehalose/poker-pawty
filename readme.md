@@ -29,3 +29,5 @@ Fun story, I was sent the code test for this after recently having seen Casino R
 - Go into your project directory
 - Open the `index.html` file in your preferred browser
 - Be wowwed _(Or bow-wowwed, given the project's content)_
+
+**Alternatively:** You can check out this preview I just uploaded [over here](https://trehalose.github.io/preview/poker-pawty/).
