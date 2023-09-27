@@ -1,3 +1,4 @@
+const HAND_SIZE = 5;
 const HAND_TYPES = {
 	'UNNAMED': () => ({ index: 0, prettyName: 'Unnamed' }),
 	'PAIR': () => ({ index: 1, prettyName: 'Pair' }),
@@ -12,5 +13,6 @@ const HAND_TYPES = {
 };
 
 export {
+	HAND_SIZE,
 	HAND_TYPES
 };

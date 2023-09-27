@@ -1,4 +1,7 @@
-import { HAND_TYPES } from './constants.js';
+import {
+	HAND_TYPES,
+	HAND_SIZE
+} from './constants.js';
 
 // Card type checker methods
 const isRoyalFlush = (hand = []) => {
@@ -23,7 +26,7 @@ const isFullHouse = (hand = []) => {
 };
 const isFlush = (hand = []) => {
 	const firstCardSuit = hand[0].suit;
-	return hand.map(card => card.suit).filter(suit => suit === firstCardSuit).length === 5;
+	return hand.map(card => card.suit).filter(suit => suit === firstCardSuit).length === HAND_SIZE;
 };
 const isStraight = (hand = [], isRoyal = false) => {
 	// NOTE: Ace is 14, TODO: refactor if in the mood for it
