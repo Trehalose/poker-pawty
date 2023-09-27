@@ -3,6 +3,7 @@ import dealHand from './cards/deal-hand.js';
 import determineHandType from './cards/determine-hand-type.js';
 import setPlayers from './players/set-players.js';
 import sortForRoundWinner from './players/sort-round-winner.js';
+import renderPlayers from './viewport/render-players.js';
 
 
 // Ladies && gentlemen, let's start the game~
@@ -18,5 +19,6 @@ players.forEach((player) => {
 		for this speed of a project, I think.
 */
 players.sort(sortForRoundWinner);
-console.log('players: ', players);
-console.log('Winning player: ', players[0]);
+
+// Render the "game"
+renderPlayers(players);
