@@ -1,7 +1,7 @@
 {
-  "name": "teachtown-coding-challenge",
+  "name": "poker-pawty",
   "version": "0.0.0",
-  "description": "Doin the code project for TeachTown.",
+  "description": "Doin a code test project, but may pick this up later for funsies.",
   "scripts": {
     "rollup-dists": "rollup -c rollup.config.js",
     "build-css": "gulp minify-css",
