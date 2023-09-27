@@ -1,0 +1,51 @@
+/* Page foundationals */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--smallest-side: min(100vw, 100vh);
+}
+html {
+	font-family: serif;
+	font-size: calc(var(--smallest-side) * 0.025);
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: calc(100vw - (100vw - 100%));
+	min-height: 100vh;
+	background-color: #000000;
+}
+
+/* Randoms */
+.red {
+	color: #ff0000;
+}
+.black {
+	color: #000000;
+}
+
+/* Main app containers */
+#gameboard, #ui {
+	position: fixed;
+	width: var(--smallest-side);
+	height: var(--smallest-side);
+}
+#gameboard {
+	background-image: url('./imgs/table-1.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow: hidden;
+}
+
+.player {
+	position: absolute;
+	width: min(45vw, 45vh);
+	height: min(45vw, 45vh);
+	transform-origin: center top;
+	border: transparent solid 0;
+}
