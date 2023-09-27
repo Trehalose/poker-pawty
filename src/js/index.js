@@ -1,7 +1,8 @@
 import askPlayerCount from './players/ask-player-count.js';
-import setPlayers from './players/set-players.js';
 import dealHand from './cards/deal-hand.js';
 import determineHandType from './cards/determine-hand-type.js';
+import setPlayers from './players/set-players.js';
+import sortForRoundWinner from './players/sort-round-winner.js';
 
 
 // Ladies && gentlemen, let's start the game~
@@ -12,4 +13,10 @@ players.forEach((player) => {
 	player.hand = dealHand();
 	player.handType = determineHandType(player.hand);
 });
+/* NOTE: 
+		This is my lazy way to pin a winning player
+		for this speed of a project, I think.
+*/
+players.sort(sortForRoundWinner);
 console.log('players: ', players);
+console.log('Winning player: ', players[0]);
